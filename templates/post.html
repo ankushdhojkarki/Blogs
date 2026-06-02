@@ -1,0 +1,189 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>Post - A Quiet Corner</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-text">A Quiet Corner</span>
+        </a>
+      </div>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item">
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Post Header -->
+  <article class="post-article">
+    <div class="post-header">
+      <div class="container">
+        <div class="post-meta">
+          <a href="blog.html" class="back-link">&larr; Back to Stories</a>
+        </div>
+        <h1 class="post-title" id="postTitle">Post Title</h1>
+        <div class="post-info">
+          <span class="post-date" id="postDate">January 1, 2024</span>
+          <span class="post-category" id="postCategory">Category</span>
+          <span class="read-time" id="readTime">5 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Image -->
+    <div class="post-image-container" id="postImageContainer">
+      <!-- Populated by JavaScript -->
+    </div>
+
+    <!-- Post Content -->
+    <main class="post-content container">
+      <div class="post-body" id="postBody">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Post Tags -->
+      <div class="post-tags" id="postTags">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Post Navigation -->
+      <nav class="post-navigation">
+        <a href="#" class="nav-prev" id="prevPost">
+          <span class="nav-label">Previous Post</span>
+          <span class="nav-title" id="prevTitle"></span>
+        </a>
+        <a href="#" class="nav-next" id="nextPost">
+          <span class="nav-label">Next Post</span>
+          <span class="nav-title" id="nextTitle"></span>
+        </a>
+      </nav>
+
+      <!-- Author Section -->
+      <section class="author-section">
+        <img src="https://via.placeholder.com/80" alt="Author" class="author-avatar">
+        <div class="author-info">
+          <h3>About the Author</h3>
+          <p>I write about code, books, games, and the quirky observations of everyday life. Always learning, always thinking.</p>
+          <div class="author-links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comments Section -->
+      <section class="comments-section">
+        <h3>Thoughts?</h3>
+        <p class="comments-notice">Comments are currently disabled, but you can reach out via email.</p>
+        
+        <form class="comment-form" id="commentForm">
+          <div class="form-group">
+            <label for="commentName">Name</label>
+            <input type="text" id="commentName" required aria-label="Your name">
+          </div>
+          <div class="form-group">
+            <label for="commentEmail">Email</label>
+            <input type="email" id="commentEmail" required aria-label="Your email">
+          </div>
+          <div class="form-group">
+            <label for="commentText">Message</label>
+            <textarea id="commentText" rows="5" required aria-label="Your message"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </article>
+
+  <!-- Related Posts -->
+  <section class="related-posts">
+    <div class="container">
+      <h2>More Stories</h2>
+      <div class="posts-grid" id="relatedGrid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>A Quiet Corner</h3>
+          <p>Honest writing about code, books, games, and life.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html?category=code">Code</a></li>
+            <li><a href="blog.html?category=books">Books</a></li>
+            <li><a href="blog.html?category=games">Games</a></li>
+            <li><a href="blog.html?category=life">Life</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            <li><a href="#" aria-label="Email">Email</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 A Quiet Corner. All thoughts my own.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
