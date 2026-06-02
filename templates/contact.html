@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with me. I&apos;d love to hear from you.">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>Contact - A Quiet Corner</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-text">A Quiet Corner</span>
+        </a>
+      </div>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li class="nav-item">
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p>I&apos;d love to hear from you</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container page-content">
+    <section class="contact-section">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper fade-in">
+          <h2>Send a Message</h2>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                aria-label="Your name"
+                placeholder="What should I call you?">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                aria-label="Your email"
+                placeholder="where to reach you">
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required 
+                aria-label="Message subject"
+                placeholder="What&apos;s this about?">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="8" 
+                required 
+                aria-label="Your message"
+                placeholder="Share your thoughts..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="type">Message Type</label>
+              <select id="type" name="type" aria-label="Message type">
+                <option value="">Select a category...</option>
+                <option value="feedback">Feedback on an article</option>
+                <option value="collaboration">Collaboration opportunity</option>
+                <option value="suggestion">Suggestion or idea</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+            <p class="form-note">I try to respond within 48 hours.</p>
+          </form>
+          <div id="formStatus" class="form-status"></div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+          <h2>Other Ways to Connect</h2>
+          
+          <div class="info-block">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@quietcorner.com">hello@quietcorner.com</a></p>
+            <p class="info-desc">The best way to reach me for longer conversations.</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Social Media</h3>
+            <div class="social-links-large">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>Twitter</span>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <p class="info-desc">Share or discuss articles, or just say hello.</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Prefer Not to Talk?</h3>
+            <p>No worries. Just read, think, and take what resonates with you. That&apos;s enough.</p>
+          </div>
+
+          <div class="faq-section">
+            <h3>FAQ</h3>
+            <details class="faq-item">
+              <summary>How often do you write?</summary>
+              <p>Not on a strict schedule. Quality over consistency. I publish when I have something worth saying.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I republish your articles?</summary>
+              <p>Ask first. I&apos;m usually happy to allow it if you link back and don&apos;t modify the content.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do you take guest posts?</summary>
+              <p>Not currently, but I&apos;m always interested in hearing unique perspectives. Reach out with your idea.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do you come up with ideas?</summary>
+              <p>Reading, thinking, failing at things, and conversations. Life provides endless material if you pay attention.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>A Quiet Corner</h3>
+          <p>Honest writing about code, books, games, and life.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html?category=code">Code</a></li>
+            <li><a href="blog.html?category=books">Books</a></li>
+            <li><a href="blog.html?category=games">Games</a></li>
+            <li><a href="blog.html?category=life">Life</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            <li><a href="#" aria-label="Email">Email</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 A Quiet Corner. All thoughts my own.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{% static 'js/data.js' %}"></script>
+  <script src="{% static 'js/utils.js' %}"></script>
+  <script src="{% static 'js/navigation.js' %}"></script>
+  <script src="{% static 'js/animations.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

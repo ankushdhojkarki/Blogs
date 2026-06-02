@@ -1,0 +1,215 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about me and what drives my writing.">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>About - A Quiet Corner</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-text">A Quiet Corner</span>
+        </a>
+      </div>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item">
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>The person behind these words</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container page-content">
+    <!-- About Section -->
+    <section class="about-section fade-in">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Hello, I&apos;m [Your Name]</h2>
+          <p>Welcome to my quiet corner of the internet. I&apos;m a developer, reader, gamer, and perpetual student of life. This space exists because I believe in the power of thinking out loud.</p>
+          
+          <p>By day, I work on building things with code. By night, I read books that challenge my assumptions, play games that make me think differently, and reflect on the small moments that somehow turn into big realizations.</p>
+          
+          <p>No expertise required here—just curiosity. I&apos;m figuring things out as I go, and I thought it would be nicer to do that out loud. Maybe you&apos;ll find something useful. Maybe you&apos;ll find something that resonates. Or maybe you&apos;ll just spend a few minutes reading the thoughts of someone trying to make sense of it all.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://via.placeholder.com/300x300" alt="Profile photo" class="profile-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section class="interests-section">
+      <h2>What I Care About</h2>
+      <div class="interests-grid">
+        <div class="interest-card fade-in">
+          <h3>Code</h3>
+          <p>The elegance of well-written code, the frustration of debugging, the joy of solving problems. I write about the technical journey and what it teaches about thinking clearly.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Books</h3>
+          <p>Stories and ideas that shift perspective. I read widely—fiction, philosophy, psychology—and love exploring how different authors tackle universal themes.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Games</h3>
+          <p>Games as art, as stories, as systems. They teach design, narrative, and the balance between challenge and reward. I play to understand, not just to win.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Life</h3>
+          <p>The ordinary moments that become extraordinary. Reflections on growth, failure, friendship, and the small choices that compound into who we become.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+      <h2>How I Write</h2>
+      <div class="values-list">
+        <div class="value-item fade-in">
+          <h3>Honesty</h3>
+          <p>I write about failures as much as successes. About confusion as much as clarity. This space is for truth, not perfection.</p>
+        </div>
+        <div class="value-item fade-in">
+          <h3>Clarity</h3>
+          <p>Complex ideas deserve clear explanation. I aim to write in a way that&apos;s accessible without being condescending.</p>
+        </div>
+        <div class="value-item fade-in">
+          <h3>Depth</h3>
+          <p>Surface-level thinking is easy. I dig deeper, ask harder questions, and invite you to think beyond the obvious.</p>
+        </div>
+        <div class="value-item fade-in">
+          <h3>Curiosity</h3>
+          <p>I&apos;m always learning. These posts are part of that journey. Your perspective and questions help me learn too.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <h2>My Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Started Coding</h3>
+            <p>Fell in love with the logic and creativity of building things with code.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>First Professional Role</h3>
+            <p>Learned that real-world code is messy, people are complicated, and patience is a superpower.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Started Writing</h3>
+            <p>Realized that writing about what I&apos;m learning helps me learn faster and maybe helps others too.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>A Quiet Corner</h3>
+            <p>Created this space as a home for authentic thoughts about everything that shapes me.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Let&apos;s Connect</h2>
+      <p>Have thoughts to share? Questions? Want to chat about code, books, or games?</p>
+      <a href="contact.html" class="cta-button">Get in Touch</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>A Quiet Corner</h3>
+          <p>Honest writing about code, books, games, and life.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html?category=code">Code</a></li>
+            <li><a href="blog.html?category=books">Books</a></li>
+            <li><a href="blog.html?category=games">Games</a></li>
+            <li><a href="blog.html?category=life">Life</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            <li><a href="#" aria-label="Email">Email</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 A Quiet Corner. All thoughts my own.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{% static 'js/data.js' %}"></script>
+  <script src="{% static 'js/utils.js' %}"></script>
+  <script src="{% static 'js/navigation.js' %}"></script>
+  <script src="{% static 'js/animations.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
